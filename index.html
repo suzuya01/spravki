@@ -15,41 +15,51 @@
         </div>
         <form action="word.php" method="POST" enctype="multipart/form-data" class="flex flex-col w-5/12">
             <div class="flex gap-2">
-                <input type="text" name="FIO" placeholder="Введите ФИО" required class="rounded-lg p-1 text-lg mb-4 w-2/3">
-                <input type="text" name="Course" placeholder="Введите курс" required class="rounded-lg p-1 text-lg mb-4 w-1/3">
-                <input type="text" name="Group" placeholder="Введите группу" required class="rounded-lg p-1 text-lg mb-4 w-1/3">
+                <input type="text" name="FIO" placeholder="Введите ФИО" class="rounded-lg p-1 text-lg mb-4 w-1/2" required>
+                <input type="text" name="Group" placeholder="Введите группу" class="rounded-lg p-1 text-lg mb-4 w-1/2" required>
             </div>
             <div class="flex items-center gap-2 mb-4">
                 <p class="text-lg text-slate-500 font-semibold">Введите дату рождения</p>
                 <input type="date" name="BirthDate" class="rounded-lg p-1 text-lg w-[429px]" required>
             </div>
             <div class="flex items-center gap-2 mb-4">
-<!-- <input type="text" name="Specialization" placeholder="Введите Специальность" required class="rounded-lg p-1 text-lg mb-4"> -->
-                <p class="text-lg text-slate-500 font-semibold">Выберите Специальность:</p>
-                <select class="rounded-lg outline-none text-lg w-[409px] p-1" name="Specialization">
-                    <option>-</option>  
-                    <option>Информационные системы и программирование</option>                 
-                    <option>Правоохранительная деятельность</option> 
-                    <option>изобразительное искусство и черчение, Музыкальное образование</option>   
-                    <option>Адаптивная физическая культура, Физическая культура</option>   
-                    <option>Коррекционная педагогика в начальном образовании, преподавание в начальных классах</option>    
-                    <option>Дошкольное образование, Специальное дошкольное образование</option>                   
+                <p class="text-lg text-slate-500 font-semibold">Выберите курс:</p> 
+                <select class="rounded-lg outline-none text-lg p-1 w-[500px]" name="Course" required>
+                    <option disabled selected></option>  
+                    <option>1</option>                 
+                    <option>2</option>    
+                    <option>3</option>   
+                    <option>4</option>                 
                 </select>
             </div>
             <div class="flex items-center gap-2 mb-4">
-<!-- <input type="text" name="FormOfTraining" placeholder="Введите форму обучения" required class="rounded-lg p-1 text-lg w-[270px]"> -->
+                <p class="text-lg text-slate-500 font-semibold">Выберите Специальность:</p>
+                <select class="rounded-lg outline-none text-lg w-[409px] p-1" name="Specialization" required>
+                    <option disabled selected=""></option>  
+                    <option>Информационные системы и программирование</option>                 
+                    <option>Правоохранительная деятельность</option> 
+                    <option>изобразительное искусство и черчение</option>   
+                    <option>Музыкальное образование</option>
+                    <option>Адаптивная физическая культура</option>
+                    <option>Физическая культура</option>   
+                    <option>Коррекционная педагогика в начальном образовании</option>
+                    <option>Преподавание в начальных классах</option>    
+                    <option>Дошкольное образование</option>
+                    <option>Специальное дошкольное образование</option>                   
+                </select>
+            </div>
+            <div class="flex items-center gap-2 mb-4">
                 <p class="text-lg text-slate-500 font-semibold">Выберите форму обучения:</p>
-                <select class="rounded-lg outline-none text-lg w-[395px] p-1" name="FormOfTraining">
-                    <option>-</option>  
+                <select class="rounded-lg outline-none text-lg w-[395px] p-1" name="FormOfTraining" required>
+                    <option disabled selected=""></option>  
                     <option>Очная</option>                 
                     <option>Заочная</option>                  
                 </select>
             </div>
-            <div class="flex items-center gap-2 mb-4">
-<!-- <input type="text" name="TuitionFees" placeholder="Введите вид платы за обучение" required class="rounded-lg p-1 text-lg w-[270px]">-->        
+            <div class="flex items-center gap-2 mb-4"> 
                 <p class="text-lg text-slate-500 font-semibold">Выберите вид платы за обучение:</p> 
-                <select class="rounded-lg outline-none text-lg w-[342px] p-1" name="TuitionFees">
-                    <option>-</option>  
+                <select class="rounded-lg outline-none text-lg w-[342px] p-1" name="TuitionFees" required>
+                    <option disabled selected=""></option>  
                     <option>Бюджет</option>                 
                     <option>Платно по договору</option>                  
                 </select>
@@ -59,11 +69,11 @@
                 <div class="flex items-center gap-2 ">
                     <div class="flex items-center gap-2">
                         <p class="text-lg text-slate-500 font-semibold">Срок обучения с</p>
-                        <input type="date" name="TrainingWith" placeholder="Введите начальный год обучения" required class="rounded-lg p-1 text-lg w-[145px]">
+                        <input type="date" name="TrainingWith" placeholder="Введите начальный год обучения" class="rounded-lg p-1 text-lg w-[145px]" required>
                     </div>
                     <div class="flex items-center gap-2">
                         <p class="text-lg text-slate-500 font-semibold">Срок обучения по</p>
-                        <input type="date" name="TrainingBy" placeholder="Введите конечный год обучения" required class="rounded-lg p-1 text-lg w-[145px]">
+                        <input type="date" name="TrainingBy" placeholder="Введите конечный год обучения" class="rounded-lg p-1 text-lg w-[145px]" required>
                     </div>
                 </div>
             </div>  
@@ -71,16 +81,17 @@
                 <div class="mb-4">
                     <div class="flex items-center gap-2 ">
                         <p class="text-lg text-slate-500 font-semibold">зачислен(а)  приказом от </p>
-                        <input type="date" name="Credited" placeholder="Введите конечный год обучения" required class="rounded-lg p-1 text-lg w-[400px]">
+                        <input type="date" name="Credited" placeholder="Введите конечный год обучения" class="rounded-lg p-1 text-lg w-[400px]" required>
                     </div>  
                 </div>     
                 <div class="flex items-center gap-2 mb-4">
-                    <input type="text" name="OrderNumber" placeholder="Введите номер договора" required class="rounded-lg p-1 text-lg w-[450px]">
+                    <input type="text" name="OrderNumber" placeholder="Введите номер приказа" class="rounded-lg p-1 text-lg w-[446px]" required>
                     <p class="text-lg text-slate-500 font-semibold">Пример: (228, 443-Б)</p>
                 </div>
             </div>
-            <div class="flex justify-center">
-                <button id="btn" type="submit" class="text-lg text-slate-600 font-semibold rounded-[29px] bg-slate-300 w-[200px]">Отправить</button>
+            <div class="flex justify-center gap-4">
+                <button id="btn" type="submit" class="text-lg text-slate-600 font-semibold rounded-[29px] bg-slate-300 w-[230px]">Отправить</button>
+                <a href="Students.xlsx" download="Students.xlsx" id="btn" target="_blank" class="text-lg text-slate-600 font-semibold rounded-[29px] bg-slate-300 w-[230px] text-center">Скачать Excel таблицу</a>
             </div>
         </form>
         <footer class="text-center mt-24">
