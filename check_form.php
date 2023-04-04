@@ -31,7 +31,8 @@ $document->setValue('Credited', $Credited);
 
 
 $outputFile = trim("$FIO$Group.docx");
-$document->saveAs("./spravki/$outputFile");
+// $document->saveAs("./spravki/$outputFile");
+$document->saveAs($outputFile);
 
 
 // Имя скачиваемого файла
