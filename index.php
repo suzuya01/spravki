@@ -65,16 +65,16 @@
                 <p class="text-lg text-slate-500 font-semibold">Выберите Специальность:</p>
                 <select class="rounded-lg outline-none text-lg w-[409px] p-1" name="Specialization" required>
                     <option disabled selected=""></option>  
-                    <option>Информационные системы и программирование</option>                 
-                    <option>Правоохранительная деятельность</option> 
-                    <option>Изобразительное искусство и черчение</option>   
-                    <option>Музыкальное образование</option>
-                    <option>Адаптивная физическая культура</option>
-                    <option>Физическая культура</option>   
-                    <option>Коррекционная педагогика в начальном образовании</option>
-                    <option>Преподавание в начальных классах</option>    
-                    <option>Дошкольное образование</option>
-                    <option>Специальное дошкольное образование</option>                   
+                    <option>09.02.07 Информационные системы и программирование</option>                 
+                    <option>40.02.02 Правоохранительная деятельность</option> 
+                    <option>44.02.01 Дошкольное образование</option>
+                    <option>44.02.02 Преподавание в начальных классах</option>    
+                    <option>44.02.04 Специальное дошкольное образование</option>                   
+                    <option>44.02.05 Коррекционная педагогика в начальном образовании</option>
+                    <option>49.02.01 Физическая культура</option>   
+                    <option>49.02.02 Адаптивная физическая культура</option>
+                    <option>53.02.01 Музыкальное образование</option>
+                    <option>54.02.06 Изобразительное искусство и черчение</option>   
                 </select>
             </div>
             <div class="flex items-center gap-2 mb-4">

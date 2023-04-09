@@ -21,13 +21,27 @@ $OldTrainingWith = $_POST['TrainingWith'];
 $OldTrainingBy = $_POST['TrainingBy'];
 $OldCredited = $_POST['Credited'];
 
-
+$arr = [
+    'января',
+    'февраля',
+    'марта',
+    'апреля',
+    'мая',
+    'июня',
+    'июля',
+    'августа',
+    'сентября',
+    'октября',
+    'ноября',
+    'декабря'
+]; 
+$month = date('n')-1;
 //------------Работа с датой и Конвертация даты в нормальный вид------------\\
-$THISDATE = date('« d » F o');                   
-$NewBirthDate = date('« d » F o', strtotime($OldBirthDate));
-$NewTrainingWith = date('« d » F o', strtotime($OldTrainingWith));
-$NewTrainingBy = date('« d » F o', strtotime($OldTrainingBy));                  
-$NewCredited = date('« d » F o', strtotime($OldCredited));
+$THISDATE = date('« d » '.$arr[$month].' o');                   
+$NewBirthDate = date('« d » m o', strtotime($OldBirthDate));
+$NewTrainingWith = date('« d » m o', strtotime($OldTrainingWith));
+$NewTrainingBy = date('« d » m o', strtotime($OldTrainingBy));                  
+$NewCredited = date('« d » m o', strtotime($OldCredited));
 
 
 //------------Заполнения документа данными из формы------------\\
