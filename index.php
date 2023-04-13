@@ -16,9 +16,9 @@
         </div>
         <div id="block" class="absolute flex-col right-44 w-[400px] top-[215px] border py-2 rounded-lg bg-slate-200">
             <div class="flex items-center justify-center">
-                <div class="flex justify-center pl-4 h-[250px]">
-                        <button id="btn" class="text-2xl text-slate-500 font-semibold rounded-lg w-[120px] px-2 py-1 bg-slate-300">очистить всё</button>
-                </div>
+                <form action="delet.php" method="post" class="flex justify-center pl-4 h-[250px]">
+                    <button id="btn" class="text-2xl text-slate-500 font-semibold rounded-lg w-[120px] px-2 py-1 bg-slate-300" name="delet">очистить всё</button>
+                </form>
                 <div class="w-[400px]">
                     <div class="flex flex-col justify-center items-center">
                         <h1 class="text-right text-slate-500 font-semibold text-lg mb-4">Уже созданные справки</h1>
