@@ -20,6 +20,7 @@ $TrainingWith = $_POST['TrainingWith'];
 $TrainingBy = $_POST['TrainingBy'];
 $Credited = $_POST['Credited'];
 
+//------------Массив для написания месяца по русски, работает только с датой создания справки------------\\  
 $arr = [
     'января',
     'февраля',
@@ -35,6 +36,7 @@ $arr = [
     'декабря'
 ]; 
 $month = date('n')-1;
+
 //------------Работа с датой и Конвертация даты в нормальный вид------------\\
 $THISDATE = date('« d » '.$arr[$month].' o');                   
 $BirthDate = date('d.m.o', strtotime($BirthDate));
