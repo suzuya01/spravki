@@ -7,7 +7,6 @@ require_once 'vendor/autoload.php';
 //------------Создаем обращение к файлу(шаблону) review.docx------------\\  
 $document = new \PhpOffice\PhpWord\TemplateProcessor('./spravka.docx');
 
-
 //------------Передача данных в переменную методом POST------------\\   
 $FIO = $_POST['FIO'];
 $Specialization = $_POST['Specialization'];
@@ -16,10 +15,10 @@ $Group = $_POST['Group'];
 $FormOfTraining = $_POST['FormOfTraining'];
 $TuitionFees = $_POST['TuitionFees'];
 $OrderNumber = $_POST['OrderNumber'];
-$OldBirthDate = $_POST['BirthDate'];
-$OldTrainingWith = $_POST['TrainingWith'];
-$OldTrainingBy = $_POST['TrainingBy'];
-$OldCredited = $_POST['Credited'];
+$BirthDate = $_POST['BirthDate'];
+$TrainingWith = $_POST['TrainingWith'];
+$TrainingBy = $_POST['TrainingBy'];
+$Credited = $_POST['Credited'];
 
 $arr = [
     'января',
@@ -38,10 +37,10 @@ $arr = [
 $month = date('n')-1;
 //------------Работа с датой и Конвертация даты в нормальный вид------------\\
 $THISDATE = date('« d » '.$arr[$month].' o');                   
-$NewBirthDate = date('« d » m o', strtotime($OldBirthDate));
-$NewTrainingWith = date('« d » m o', strtotime($OldTrainingWith));
-$NewTrainingBy = date('« d » m o', strtotime($OldTrainingBy));                  
-$NewCredited = date('« d » m o', strtotime($OldCredited));
+$BirthDate = date('d.m.o', strtotime($BirthDate));
+$TrainingWith = date('d.m.o', strtotime($TrainingWith));
+$TrainingBy = date('d.m.o', strtotime($TrainingBy));                  
+$Credited = date('d.m.o', strtotime($Credited));
 
 
 //------------Заполнения документа данными из формы------------\\
@@ -51,12 +50,12 @@ $document->setValue('Specialization', $Specialization);
 $document->setValue('Course', $Course);
 $document->setValue('Group', $Group);
 $document->setValue('FormOfTraining', $FormOfTraining);
-$document->setValue('BirthDate', $NewBirthDate);
+$document->setValue('BirthDate', $BirthDate);
 $document->setValue('TuitionFees', $TuitionFees);
 $document->setValue('OrderNumber', $OrderNumber);
-$document->setValue('TrainingWith', $NewTrainingWith);
-$document->setValue('TrainingBy', $NewTrainingBy);
-$document->setValue('Credited', $NewCredited);
+$document->setValue('TrainingWith', $TrainingWith);
+$document->setValue('TrainingBy', $TrainingBy);
+$document->setValue('Credited', $Credited);
 
 
 //-----------------------------------------Обычная загрузка файла-----------------------------------------\\
@@ -77,25 +76,4 @@ header("Content-Disposition: attachment; filename=".$outputFile);
 readfile($downloadFile);
 
 header("Refresh: 1");
-
-// use PhpOffice\PhpSpreadsheet\Spreadsheet;
-// use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-// $spreadsheet = new Spreadsheet();
-// $activeWorksheet = $spreadsheet->getActiveSheet();
-// $activeWorksheet->setCellValue('A1', 'ФИО');
-// $activeWorksheet->setCellValue('B1', 'Дата рождения');
-// $activeWorksheet->setCellValue('C1', 'Курс');
-// $activeWorksheet->setCellValue('D1', 'Группа');
-// $activeWorksheet->setCellValue('E1', 'Специальность');
-// $activeWorksheet->setCellValue('F1', 'Форма обучения');
-// $activeWorksheet->setCellValue('G1', 'Вид платы за обучение');
-// $activeWorksheet->setCellValue('H1', 'Срок обучение с');
-// $activeWorksheet->setCellValue('I1', 'Срок обучения по');
-// $activeWorksheet->setCellValue('J1', 'Зачислени приказом от');
-// $activeWorksheet->setCellValue('K1', 'Номер приказа');
-
-
-// $writer = new Xlsx($spreadsheet);
-// $writer->save('Students.xlsx');
 ?>

@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="./src/styles/scroll.css">
+    <link rel="shortcut icon" href="./src/image/favicon.ico" type="image/x-icon">
     <title>Заполение справок</title>
 </head>
 <body class="bg-slate-200">
@@ -120,7 +121,6 @@
             </div>
             <div class="flex justify-center gap-4">
                 <button onClick="setTimeout(()=>{window.location.reload()},1000);" id="btn" type="submit" class="text-lg text-slate-600 font-semibold rounded-[29px] bg-slate-300 w-[230px]">Отправить</button>
-                <!-- <a href="Students.xlsx" download="Students.xlsx" id="btn" target="_blank" class="text-lg text-slate-600 font-semibold rounded-[29px] bg-slate-300 w-[230px] text-center">Скачать Excel таблицу</a> -->
             </div>
         </form>
         <footer class="text-center mt-24">
