@@ -13,8 +13,8 @@
     <div class="flex justify-center mb-14 max-[768px]:mb-none">
         <img src="./src/image/logo100fix4.png" alt="" width="777px">
     </div>
-    <div class="container mx-auto h-4/5 flex items-center justify-center gap-4 max-[768px]:flex-col py-4 text-lg">
-        <div id="left_side" class="w-1/2  max-[592px]:w-full px-3">
+    <div class="container mx-auto h-4/5 flex items-center justify-center gap-4 max-[1024px]:flex-col py-4 text-lg">
+        <div id="left_side" class="w-1/2  max-[768px]:w-full px-3">
             <form action="check_form.php" method="POST" enctype="multipart/form-data" class="flex flex-col">
                 <div class="flex gap-2 max-[592px]:flex-col">
                     <input type="text" name="FIO" placeholder="Введите ФИО" class="rounded-lg p-1 mb-4 w-1/2 max-[592px]:w-full" required>
@@ -95,7 +95,7 @@
             </form>
         </div>
         <div id="right_side">
-            <div id="block" class="flex-col w-5/6 border py-2 rounded-lg bg-slate-200 max-[592px]:w-full">
+            <div id="block" class="flex-col w-full border py-2 rounded-lg bg-slate-200 max-[592px]:w-full p-4">
                 <div class="flex items-center justify-center w-full gap-3">
                     <form action="delet.php" method="post" class="flex justify-center pl-4 h-[200px]" >
                         <button id="btn" class="text-2xl text-slate-500 font-semibold rounded-lg w-[120px] px-2 py-1 bg-slate-300" name="delet">очистить всё</button>
