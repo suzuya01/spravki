@@ -4,7 +4,7 @@
 require_once 'vendor/autoload.php';
 
 
-//------------Создаем обращение к файлу(шаблону) review.docx------------\\  
+//------------Создаем обращение к файлу(шаблону) spravka.docx------------\\  
 $document = new \PhpOffice\PhpWord\TemplateProcessor('./spravka.docx');
 
 //------------Передача данных в переменную методом POST------------\\   
@@ -78,4 +78,3 @@ header("Content-Disposition: attachment; filename=".$outputFile);
 readfile($downloadFile);
 
 header("Refresh: 1");
-?>
